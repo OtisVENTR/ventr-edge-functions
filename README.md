@@ -9,6 +9,13 @@ variables.
 - [`emailit-webhook`](supabase/functions/emailit-webhook/index.ts): a webhook
   handler that captures transactional email events into Postgres.
 
+> **This is a code sample, not a production repository.** Both functions are
+> copied out of VENTR's private operational codebase and published here only as
+> a work sample, so the engineering can be reviewed without exposing live
+> systems. The production code, the rest of the codebase, and all client data
+> remain private. Project identifiers have been removed and example client
+> names genericized.
+
 ## form-spam-gateway
 
 A stateless classifier that an n8n workflow calls as step one of every contact
@@ -68,8 +75,7 @@ Schema: [`emailit_events.sql`](supabase/migrations/20260521130000_emailit_events
 
 ## Notes
 
-These are real functions, lightly scrubbed for public release: project
-identifiers removed, example client names genericized. No secrets are committed.
-See [`.env.example`](.env.example) for the variables each function reads.
+No secrets are committed. See [`.env.example`](.env.example) for the variables
+each function reads.
 
 Deploy with the Supabase CLI: `supabase functions deploy <name>`.
